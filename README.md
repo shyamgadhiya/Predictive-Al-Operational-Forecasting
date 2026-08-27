@@ -33,7 +33,7 @@
 ---
 
 ## 3. Metric Comparison Summary
-
+**With only 14 training rows, XGBoost could not learn continuous time relationships and over-smoothed the sharp weekly cycles by averaging just 2–3 samples per leaf node.**
 - **lab_tests:** The Seasonal Naive baseline outperformed XGBoost because laboratory demand follows an exact weekly cycle that gradient boosting blunted due to having only 14 training rows.
 - **ed_arrivals:** The baseline beat the ML model as emergency arrivals repeat standard midweek peaks that were captured directly by 7-day lags without tree approximation errors.
 - **opd_visits:** The baseline achieved significantly lower error because outpatient visits exhibit extreme weekday-vs-weekend variance that tree-based step functions over-smoothed on a small sample.
